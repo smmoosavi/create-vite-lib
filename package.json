@@ -1,0 +1,23 @@
+{
+  "name": "create-vite-lib",
+  "version": "0.0.0",
+  "description": "create lib with vite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smmoosavi/create-vite-lib.git"
+  },
+  "keywords": [
+    "vite",
+    "lib"
+  ],
+  "author": "smmoosavi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smmoosavi/create-vite-lib/issues"
+  },
+  "homepage": "https://github.com/smmoosavi/create-vite-lib#readme"
+}
