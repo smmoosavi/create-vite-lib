@@ -1,0 +1,45 @@
+{
+  "name": "{{dashCase name}}",
+  "version": "0.1.0",
+  "files": [
+    "src",
+    "dist",
+    "index.d.ts",
+    "tsdoc-metadata.json"
+  ],
+  "license": "MIT",
+  "main": "./dist/{{dashCase name}}.umd.js",
+  "module": "./dist/{{dashCase name}}.es.js",
+  "typings": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/{{dashCase name}}.es.js",
+      "require": "./dist/{{dashCase name}}.umd.js"
+    }
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "tsc && lint-staged",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
+    "format:check": "prettier --check '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
+    "test": "jest",
+    "dev": "vite",
+    "build:dts": "api-extractor run --local --verbose && prettier --write index.d.ts",
+    "build": "tsc && vite build && pnpm build:dts",
+    "prepublishOnly": "pnpm build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.18.19",
+    "@types/jest": "^27",
+    "@types/node": "^16",
+    "husky": "^7",
+    "jest": "^27",
+    "lint-staged": "^12",
+    "prettier": "^2",
+    "ts-jest": "^27",
+    "typescript": "^4",
+    "vite": "^2",
+    "vite-plugin-dts": "^0.9"
+  }
+}

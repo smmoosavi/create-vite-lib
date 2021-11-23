@@ -1,1 +1,3 @@
-module.exports = function (plop) {};
+module.exports = function (plop) {
+    plop.load('./plops/lib')
+};
