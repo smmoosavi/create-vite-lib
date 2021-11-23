@@ -7,7 +7,7 @@
     "start": "plop"
   },
   "bin": {
-    "create-your-name-app": "./index.js"
+    "create-vite-lib": "./index.js"
   },
   "preferGlobal": true,
   "repository": {
