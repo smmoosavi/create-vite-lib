@@ -5,7 +5,7 @@ create lib with vite
 ## Usage
 
 ```
-$ pnpm create vite-lib
+$ pnpm dlx create-vite-lib
 ? [PLOP] Please choose a generator. lib
 ? lib name please my-lib
 ? description please the best lib ever
