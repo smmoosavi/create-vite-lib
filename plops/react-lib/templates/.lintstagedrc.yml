@@ -1,2 +1,2 @@
 '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}':
-  - 'libton-script format'
+  - 'prettier --write'
