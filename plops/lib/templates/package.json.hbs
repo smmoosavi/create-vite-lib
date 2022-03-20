@@ -8,14 +8,11 @@
     "tsdoc-metadata.json"
   ],
   "license": "MIT",
-  "main": "./dist/{{dashCase name}}.umd.js",
-  "module": "./dist/{{dashCase name}}.es.js",
+  "type": "module",
   "typings": "./index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/{{dashCase name}}.es.js",
-      "require": "./dist/{{dashCase name}}.umd.js"
-    }
+  "exports": "./dist/index.es.js",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
     "prepare": "husky install",

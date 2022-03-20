@@ -1,4 +1,4 @@
-import path from 'path';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
@@ -11,15 +11,12 @@ const external = [
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({ outputDir: path.resolve(__dirname, './.cache/dts') }),
-  ],
+  plugins: [react(), dts({ outputDir: resolve(__dirname, './.cache/dts') })],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: '{{pascalCase name}}',
-      fileName: (format) => `{{dashCase name}}.${format}.js`,
+      entry: resolve(__dirname, 'src/index.ts'),
+      formats: ['es'],
+      fileName: 'index',
     },
     rollupOptions: {
       external,
