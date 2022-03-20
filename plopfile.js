@@ -1,4 +1,4 @@
-module.exports = function (plop) {
-    plop.load('./plops/lib')
-    plop.load('./plops/react-lib')
+export default async function (plop) {
+  await plop.load('./plops/lib/index.js')
+  await plop.load('./plops/react-lib/index.js')
 };
