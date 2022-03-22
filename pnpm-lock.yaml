@@ -1,10 +1,12 @@
 lockfileVersion: 5.3
 
 specifiers:
+  change-case: ^4.1.2
   minimist: ^1.2.5
   plop: ^3.0.5
 
 dependencies:
+  change-case: 4.1.2
   minimist: 1.2.5
   plop: 3.0.5
 

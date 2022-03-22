@@ -1,3 +1,5 @@
+import { paramCase as kebabCase } from 'change-case';
+
 export default function (plop) {
   plop.setGenerator('react-lib', {
     description: 'create new react lib',
@@ -14,7 +16,6 @@ export default function (plop) {
       },
     ],
     actions: [
-
       {
         type: 'addMany',
         destination: '{{kebabCase name}}',
@@ -24,6 +25,15 @@ export default function (plop) {
           dot: true,
         }
       },
+      ({ name }) => `
+
+Done. Now run:
+
+  cd ${kebabCase(name)}
+  git init; git add .; git commit -m "initial commit"
+  pnpm install
+  pnpm build
+`
     ],
   });
 };

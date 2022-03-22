@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/smmoosavi/create-vite-lib#readme",
   "dependencies": {
+    "change-case": "^4.1.2",
     "minimist": "^1.2.5",
     "plop": "^3.0.5"
   }
