@@ -9,7 +9,8 @@ $ pnpm dlx create-vite-lib
 ? [PLOP] Please choose a generator. lib
 ? lib name please my-lib
 ? description please the best lib ever
-✔  +! 14 files added
+✔  +! 15 files added
+ -> /my-lib/.eslintrc.yml
  -> /my-lib/.lintstagedrc.yml
  -> /my-lib/.prettierignore
  -> /my-lib/.prettierrc.yml
@@ -24,10 +25,15 @@ $ pnpm dlx create-vite-lib
  -> /my-lib/src/index.ts
  -> /my-lib/src/my-lib.test.ts
  -> /my-lib/src/my-lib.ts
+✔  ->
 
-$ cd my-lib
-$ git init; git add --all; git commit -m 'init my-lib'
-$ pnpm install
+Done. Now run:
+
+  cd my-lib
+  git init; git add .; git commit -m "initial commit"
+  pnpm install
+  pnpm build
+
 ```
 
 ## Scripts
@@ -35,3 +41,4 @@ $ pnpm install
 - format: run prettier
 - test: run tests
 - build: build production builds
+- lint: run eslint
