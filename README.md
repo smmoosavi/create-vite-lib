@@ -2,6 +2,13 @@
 
 create lib with vite
 
+## Features
+
+- Setup vite for [Pure ESM] lib
+- Setup husky, lint-staged, prettier, eslint, jest, typescript
+- Generate a single index.d.ts file
+- Two template files: pure and react
+
 ## Usage
 
 ```
@@ -42,3 +49,5 @@ Done. Now run:
 - test: run tests
 - build: build production builds
 - lint: run eslint
+
+[Pure ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
