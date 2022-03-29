@@ -4,7 +4,7 @@ create lib with vite
 
 ## Features
 
-- Setup vite for [Pure ESM] lib
+- Setup vite for esm and cjs
 - Setup husky, lint-staged, prettier, eslint, jest, typescript
 - Generate a single index.d.ts file
 - Two template files: pure and react

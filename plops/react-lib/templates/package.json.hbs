@@ -10,7 +10,14 @@
   "license": "MIT",
   "type": "module",
   "typings": "./index.d.ts",
-  "exports": "./dist/index.es.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
