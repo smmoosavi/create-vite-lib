@@ -1,9 +1,9 @@
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 
 export declare function {{pascalCase name}}(props: {{pascalCase name}}Props): JSX.Element;
 
-declare interface {{pascalCase name}}OwnProps {}
-
-export declare type {{pascalCase name}}Props = PropsWithChildren<{{pascalCase name}}OwnProps>;
+export declare interface {{pascalCase name}}Props {
+  children?: ReactNode;
+}
 
 export {};
