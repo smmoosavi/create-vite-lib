@@ -5,9 +5,9 @@ create lib with vite
 ## Features
 
 - Setup vite for esm and cjs
-- Setup husky, lint-staged, prettier, eslint, jest, typescript
+- Setup husky, lint-staged, prettier, eslint, vitest, typescript
 - Generate a single index.d.ts file
-- Two template files: pure and react
+- Two template files: pure ts and react ts
 
 ## Usage
 
@@ -15,15 +15,13 @@ create lib with vite
 $ pnpm dlx create-vite-lib
 ? [PLOP] Please choose a generator. lib
 ? lib name please my-lib
-? description please the best lib ever
-✔  +! 15 files added
+✔  +! 14 files added
  -> /my-lib/.eslintrc.yml
  -> /my-lib/.lintstagedrc.yml
  -> /my-lib/.prettierignore
  -> /my-lib/.prettierrc.yml
  -> /my-lib/api-extractor.json
  -> /my-lib/index.d.ts
- -> /my-lib/jest.config.js
  -> /my-lib/package.json
  -> /my-lib/tsconfig.json
  -> /my-lib/vite.config.ts
@@ -49,5 +47,3 @@ Done. Now run:
 - test: run tests
 - build: build production builds
 - lint: run eslint
-
-[Pure ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
