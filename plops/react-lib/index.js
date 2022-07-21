@@ -9,11 +9,6 @@ export default function (plop) {
         name: 'name',
         message: 'lib name please',
       },
-      {
-        type: 'input',
-        name: 'description',
-        message: 'description please',
-      },
     ],
     actions: [
       {
