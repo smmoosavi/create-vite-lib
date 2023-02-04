@@ -12,7 +12,7 @@ const external = [
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({ outputDir: resolve(__dirname, './.cache/dts') })],
+  plugins: [dts({ outputDir: resolve(__dirname, './.cache/dts') }), react()],
   test: {
     environment: 'jsdom',
     setupFiles: './src/setup-test.ts',
