@@ -11,10 +11,11 @@ const external = [
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [dts({ outputDir: resolve(__dirname, './.cache/dts') })],
+  plugins: [dts({ outDir: resolve(__dirname, './.cache/dts') })],
   test: {
     coverage: {
       reporter: ['clover', 'json', 'lcov', 'text'],
+      provider: 'istanbul',
     },
   },
   build: {
