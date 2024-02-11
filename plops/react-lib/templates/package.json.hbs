@@ -22,7 +22,7 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "pre-commit": "tsc && lint-staged && pnpm lint",
     "lint": "eslint --max-warnings=0 src/**/*.{ts,tsx}",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
@@ -47,7 +47,7 @@
     "@vitest/coverage-istanbul": "^0.33",
     "eslint": "^8",
     "eslint-config-react-app": "^7",
-    "husky": "^8",
+    "husky": "^9",
     "jsdom": "^22",
     "lint-staged": "^13",
     "prettier": "^3",
