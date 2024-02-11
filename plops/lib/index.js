@@ -1,4 +1,4 @@
-import { paramCase as kebabCase } from 'change-case';
+import { kebabCase } from 'change-case';
 
 export default function (plop) {
   plop.setGenerator('lib', {
