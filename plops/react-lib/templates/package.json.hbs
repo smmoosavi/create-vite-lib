@@ -22,7 +22,7 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "pre-commit": "tsc && lint-staged && pnpm lint",
     "lint": "eslint --max-warnings=0 src/**/*.{ts,tsx}",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
@@ -36,27 +36,26 @@
   "devDependencies": {
     "@microsoft/api-extractor": "^7",
     "@testing-library/dom": "^9",
-    "@testing-library/jest-dom": "^5",
+    "@testing-library/jest-dom": "^6",
     "@testing-library/react": "^14",
     "@testing-library/user-event": "^14",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/testing-library__jest-dom": "^5",
     "@vitejs/plugin-react": "^4",
-    "@vitest/coverage-istanbul": "^0.33",
+    "@vitest/coverage-istanbul": "^1",
     "eslint": "^8",
     "eslint-config-react-app": "^7",
-    "husky": "^8",
-    "jsdom": "^22",
-    "lint-staged": "^13",
+    "husky": "^9",
+    "jsdom": "^24",
+    "lint-staged": "^15",
     "prettier": "^3",
     "react": "^18",
     "react-dom": "^18",
     "typescript": "^5",
-    "vite": "^4",
+    "vite": "^5",
     "vite-plugin-dts": "^3",
-    "vitest": "^0.33"
+    "vitest": "^1"
   },
   "peerDependencies": {
     "react": "^17",
