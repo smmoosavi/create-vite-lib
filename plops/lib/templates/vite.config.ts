@@ -4,10 +4,13 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import packageJson from './package.json';
 
-const external = [
+const dependencies = [
   ...Object.keys(packageJson.dependencies ?? {}),
   ...Object.keys(packageJson.peerDependencies ?? {}),
 ];
+
+let external = (source: string) =>
+  dependencies.some((dep) => source === dep || source.startsWith(dep + '/'));
 
 // https://vitejs.dev/config/
 export default defineConfig({
