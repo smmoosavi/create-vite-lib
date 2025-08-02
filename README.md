@@ -1,17 +1,17 @@
 # create-vite-lib
 
-A modern CLI for scaffolding TypeScript libraries with [Vite](https://vitejs.dev/).
+A modern CLI tool to scaffold TypeScript libraries powered by [Vite](https://vitejs.dev/).
 
 ## Features
 
-- **Vite-powered builds**: Outputs both ESM and CJS bundles.
-- **TypeScript-first**: Strict, up-to-date configuration.
-- **Testing ready**: Preconfigured with [Vitest](https://vitest.dev/) and [@testing-library](https://testing-library.com/).
-- **Linting & Formatting**: Includes [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), and [lint-staged](https://github.com/okonet/lint-staged).
+- **Vite-powered builds**: Supports both ESM and CJS outputs.
+- **TypeScript**: Strict, modern configuration.
+- **Testing**: [Vitest](https://vitest.dev/) and [@testing-library](https://testing-library.com/) ready.
+- **Linting & Formatting**: Pre-configured [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), and [lint-staged](https://github.com/okonet/lint-staged).
 - **Git Hooks**: [Husky](https://typicode.github.io/husky/) for pre-commit checks.
-- **Unified type declarations**: Generates a single `index.d.ts` using [API Extractor](https://api-extractor.com/).
-- **Flexible templates**: Choose between pure TypeScript or React TypeScript library templates.
-- **Instant publishing**: Ready for npm publish with zero extra config.
+- **Single type declaration**: Generates a single `index.d.ts` via [API Extractor](https://api-extractor.com/).
+- **Templates**: Choose between a pure TypeScript or React TypeScript library template.
+- **Zero-config publishing**: Ready for npm publish out of the box.
 
 ## Quick Start
 
@@ -21,7 +21,7 @@ pnpm dlx create-vite-lib
 
 Follow the prompts to select a template and name your library.
 
-Example session:
+Example:
 
 ```sh
 ? [PLOP] Please choose a generator. (Use arrow keys)
@@ -58,7 +58,7 @@ Done! Next steps:
 - `pnpm format` — Format code with Prettier
 - `pnpm lint` — Lint code with ESLint
 - `pnpm test` — Run tests with Vitest
-- `pnpm build` — Build ESM, CJS, and type declarations
+- `pnpm build` — Build production bundles (ESM & CJS & DTS)
 
 ## Template Structure
 
