@@ -27,8 +27,7 @@
     "format:check": "prettier --check '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
     "test": "vitest --run --coverage",
     "test:watch": "vitest",
-    "build:dts": "api-extractor run --local --verbose && prettier --write index.d.ts",
-    "build": "tsc && vite build && pnpm build:dts",
+    "build": "tsc && vite build && prettier --write index.d.ts",
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
@@ -41,8 +40,8 @@
     "lint-staged": "^16",
     "prettier": "^3",
     "typescript": "^5",
+    "unplugin-dts": "^1",
     "vite": "^7",
-    "vite-plugin-dts": "^4",
     "vitest": "^3"
   }
 }
