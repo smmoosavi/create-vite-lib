@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "oxc", "vitest"],
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}

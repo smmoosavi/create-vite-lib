@@ -7,7 +7,7 @@ A modern CLI tool to scaffold TypeScript libraries powered by [Vite](https://vit
 - **Vite-powered builds**: Supports both ESM and CJS outputs.
 - **TypeScript**: Strict, modern configuration.
 - **Testing**: [Vitest](https://vitest.dev/) and [@testing-library](https://testing-library.com/) ready.
-- **Linting & Formatting**: Pre-configured [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), and [lint-staged](https://github.com/okonet/lint-staged).
+- **Linting & Formatting**: Pre-configured [Oxlint](https://oxc.rs/docs/guide/usage/linter.html), [Prettier](https://prettier.io/), and [lint-staged](https://github.com/okonet/lint-staged).
 - **Git Hooks**: [Husky](https://typicode.github.io/husky/) for pre-commit checks.
 - **Single type declaration**: Generates a single `index.d.ts` via [API Extractor](https://api-extractor.com/).
 - **Templates**: Choose between a pure TypeScript or React TypeScript library template.
@@ -29,7 +29,7 @@ Example:
   react-lib
 ? lib name please my-lib
 ✔  +! 14 files added
- -> /my-lib/.eslintrc.yml
+ -> /my-lib/.oxlintrc.json
  -> /my-lib/.lintstagedrc.yml
  -> /my-lib/.prettierignore
  -> /my-lib/.prettierrc.yml
@@ -56,7 +56,7 @@ Done! Next steps:
 ## Scripts
 
 - `pnpm format` — Format code with Prettier
-- `pnpm lint` — Lint code with ESLint
+- `pnpm lint` — Lint code with Oxlint
 - `pnpm test` — Run tests with Vitest
 - `pnpm build` — Build production bundles (ESM & CJS & DTS)
 
@@ -67,7 +67,7 @@ Each generated library includes:
 - `src/` — Source code and tests
 - `vite.config.ts` — Vite build config
 - `tsconfig.json` — TypeScript config
-- `.eslintrc.yml`, `.prettierrc.yml`, `.lintstagedrc.yml` — Linting/formatting configs
+- `.oxlintrc.json`, `.prettierrc.yml`, `.lintstagedrc.yml` — Linting/formatting configs
 - `.husky/` — Git hooks
 - `api-extractor.json` — API Extractor config
 
