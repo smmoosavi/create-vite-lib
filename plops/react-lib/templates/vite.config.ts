@@ -2,7 +2,7 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import dts from 'vite-plugin-dts';
+import dts from 'unplugin-dts/vite';
 import packageJson from './package.json';
 
 const dependencies = [
@@ -15,7 +15,7 @@ let external = (source: string) =>
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [dts({ outDir: resolve(__dirname, './.cache/dts') }), react()],
+  plugins: [dts({ bundleTypes: true, strictOutput: false }), react()],
   test: {
     environment: 'jsdom',
     setupFiles: './src/setup-test.ts',
