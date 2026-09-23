@@ -95,6 +95,49 @@ git diff --exit-code || {
   exit 1
 }
 
+echo_title "Checking pre-commit hook..."
+
+commit_before_checks=$(git rev-parse HEAD)
+
+printf 'const unused = 5;\n' > src/pre-commit-test.ts
+git add src/pre-commit-test.ts
+if git commit -m "test lint failure"; then
+  echo -e "${RED}Commit succeeded despite a lint error!${NC}"
+  exit 1
+fi
+
+if [ "$(git rev-parse HEAD)" != "$commit_before_checks" ]; then
+  echo -e "${RED}HEAD changed after the lint failure!${NC}"
+  exit 1
+fi
+
+printf 'export const vite: string = 5;\n' > src/pre-commit-test.ts
+git add src/pre-commit-test.ts
+if git commit -m "test TypeScript failure"; then
+  echo -e "${RED}Commit succeeded despite a TypeScript error!${NC}"
+  exit 1
+fi
+
+if [ "$(git rev-parse HEAD)" != "$commit_before_checks" ]; then
+  echo -e "${RED}HEAD changed after the TypeScript failure!${NC}"
+  exit 1
+fi
+
+printf 'export const vite=5\n' > src/pre-commit-test.ts
+git add src/pre-commit-test.ts
+git commit -m "test lint-staged formatting"
+
+if ! git show HEAD:src/pre-commit-test.ts | cmp -s - <(printf 'export const vite = 5;\n'); then
+  echo -e "${RED}lint-staged did not format the committed file!${NC}"
+  exit 1
+fi
+
+if [ -n "$(git status --porcelain)" ]; then
+  echo -e "${RED}Git working tree is not clean after the lint-staged commit!${NC}"
+  git status --short
+  exit 1
+fi
+
 
 echo_title "Checking outdated packages..."
 
