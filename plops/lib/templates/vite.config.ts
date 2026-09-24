@@ -2,7 +2,7 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'unplugin-dts/vite';
-import packageJson from './package.json';
+import packageJson from './package.json' with { type: 'json' };
 
 const dependencies = [
   ...Object.keys(packageJson.dependencies ?? {}),
@@ -23,7 +23,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: [resolve(__dirname, 'src/index.ts')],
+      entry: [resolve(import.meta.dirname, 'src/index.ts')],
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
