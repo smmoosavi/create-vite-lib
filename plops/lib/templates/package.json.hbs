@@ -4,30 +4,33 @@
   "files": [
     "src",
     "dist",
-    "index.d.ts",
-    "tsdoc-metadata.json"
+    "index.d.ts"
   ],
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=22.22.2"
+  },
   "typings": "./index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     }
   },
   "scripts": {
     "prepare": "husky",
     "pre-commit": "tsc && lint-staged && pnpm lint",
-    "lint": "oxlint --deny-warnings src",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
     "format:check": "prettier --check '**/*.{js,jsx,ts,tsx,json,yml,css,scss,md}'",
+    "lint": "oxlint --deny-warnings src",
+    "type:check": "tsc --noEmit",
     "test": "vitest --run --coverage",
     "test:watch": "vitest",
-    "build": "tsc && vite build && prettier --write index.d.ts",
+    "check": "pnpm format:check && pnpm lint && pnpm type:check && pnpm test",
+    "build": "pnpm type:check && vite build && prettier --write index.d.ts",
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {

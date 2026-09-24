@@ -10,7 +10,7 @@
     "create-vite-lib": "./index.js"
   },
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": ">=22.22.2"
   },
   "preferGlobal": true,
   "repository": {
