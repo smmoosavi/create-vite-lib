@@ -1,0 +1,6 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "./tests/test-lib.sh": true,
+    "./tests/test-react.sh": true
+  }
+}
